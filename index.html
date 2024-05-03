@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>TODOリスト</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>TODOリスト</h1>
+    <form id="todoForm">
+        <label>カテゴリ: <input type="text" id="category"></label>
+        <label>概要: <input type="text" id="description"></label>
+        <label>期日: <input type="date" id="dueDate"></label>
+        <label>担当者: <input type="text" id="person"></label>
+        <label>ステータス:
+            <select id="status">
+                <option value="未実施">未実施</option>
+                <option value="実施中">実施中</option>
+                <option value="完了">完了</option>
+            </select>
+        </label>
+        <button type="button" onclick="addTodo()">追加</button>
+    </form>
+    <table id="todoList">
+        <thead>
+            <tr>
+                <th>カテゴリ</th>
+                <th>概要</th>
+                <th>期日</th>
+                <th>担当者</th>
+                <th>ステータス</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script src="todo.js"></script>
+</body>
+</html>
